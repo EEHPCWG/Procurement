@@ -1,0 +1,104 @@
+\begin{itemize}
+\item[(info)]
+As with the measurement capabilities described above, power and energy management and control capabilities (hardware and software tools and application programming interfaces (APIs)) are necessary to meet the needs of future supercomputing energy and power constraints. It is extremely important that [Customer] utilize early capabilities in this area and start defining and developing advanced capabilities and integrating them into a user friendly, production environment.  
+
+	The vendor shall provide mechanisms to manage and control the power and energy consumption of the system. These mechanisms may differ in implementation and purpose.  Below are envisioned usage models for these management capabilities.  They are categorized loosely by where the management occurs. It is envisioned that this capability will evolve over time from initial monitoring and reporting capabilities, to management (including activities like 6-sigma continuous improvement), and even to autonomic controls.   
+
+	These usage models are not requirements for the vendor, but rather suggestive examples that serve to help clarify the requirements for measurement capabilities described in section 4 above. Furthermore, it is recognized that many of these solutions would be provided by a third party, not by the system vendor.  
+\end{itemize}
+
+\section{Datacenter/Infrastructure}
+\begin{itemize}
+\item[(info)]
+Respond to utility requests or rate structures. For example, cut back usage during high load times, limit power during expensive utility rate times of the day. 
+
+ ``Power capping'' the system allows for provisioning the infrastructure for closer to average usage, leading to substantial infrastructure savings compared to those centers which are designed for theoretical peak usage.  
+
+Respond to demand requests; including increases in load to accommodate waste heat recovery, renewable energy, etc.
+
+Manage rate of power changes; e.g., avoid spikes.  Another example, the large variations of harmonic current produced by computer loads may need to be balanced in the data center as well as the site’s broader infrastructure and even the grid.  
+\end{itemize}
+
+\section{System Hardware and Software}
+\begin{itemize}
+\item[(info)]
+Reduce power utilization during "design days" so as to enable use of free cooling without backup chillers.  Alarm and/or automatic shut-down that responds to environmental temperature excursions that are outside of the facility design envelope by reducing system loads.  
+
+Identify higher than normal power draw components needing maintenance and/or replacement.   Or, also to identify higher than normal power draw usage from SW- perhaps that is “stuck” in an infinite loop-back mode.     
+
+Proliferate power scaling and management beyond computation, to memory, communication, I/O and Storage.  For example, under and overclocking, OS/hardware control of the total amount of energy consumed 
+
+Besides the traditional compiling for performance, the compiler vendor may want to provide the user with mechanisms to compile for energy efficiency. The possible mechanisms may include the following.
+
+\begin{itemize}
+\item
+Compiler flags for specifying performance-energy trade-offs or regarding energy efficiency as an optimization goal or a constraint.
+\item
+Programming directives for conveying user-level information to the compiler for a better optimization in the context of energy efficiency.
+\item
+Program constructs to promote energy as the first-class object so that it can be manipulated directly in source code.
+\item
+Compiler-based tools for reporting analyzed results regarding the energy efficiency of applications.     
+\end{itemize}
+\end{itemize}
+
+\section{Applications, Algorithms, Libraries}
+\begin{itemize}
+\item[(info)]
+Provides programming environment support that leads to enhanced energy efficiency 
+
+Reduce wait-states. Examples are the following:
+
+\begin{itemize}
+\item
+Schedule background I/O activity more efficiently with I/O interface extensions to mark computation and communication dominant phases. 
+\item
+Use an energy-aware MPI library which is able to use information of wait-states in order to reduce energy consumption.
+\end{itemize}
+
+Reduce the power draw in wait-states. An example is the following:
+
+\begin{itemize}
+\item
+Attain energy reduction for task-parallel execution of dense and sparse linear algebra operations on multi-core and many-core processors, when idle periods are leveraged by promoting CPU cores to a power-saving C-state.
+\end{itemize}
+
+Scale resources appropriately. Examples are the following:
+\begin{itemize}
+\item
+Apply the phase detection procedure to parallel electronic structure calculations, performed by a widely used package GAMESS. Distinguishing computation and communication processes have led to several insights as to the role of process-core mapping in the application of dynamic frequency scaling during communications.
+\item
+Analyze the energy-saving potential by reducing the voltage and frequency of processes not lying on a critical path, i.e. those with wait-states before global synchronization points.
+\item
+Enabling network bandwidth tuning for performance and energy efficiency.
+\end{itemize}
+
+Select appropriate energy-performance trade-off. An example is the following:
+\begin{itemize}
+\item
+Optimize the power profile of a dense linear algebra algorithm (PLASMA) by focusing on the specific energy requirements of the various factorization algorithms and their stages.
+\end{itemize}
+
+Programming and performance analysis tools.. An example is the following: 
+\begin{itemize}
+\item
+Counters, accumulators, in-band support
+\end{itemize}
+
+Open up control of these policies so that we can turn them on and off.  Zero setting if it is detrimental to our applications at scale. 
+\end{itemize}
+
+\section{Schedulers, Middleware, Management}
+\begin{itemize}
+\item[(info)]
+Putting hardware into the lowest reasonable power state or switching off idle resources (nodes, storage, etc.) when job scheduling cannot allow for full utilization. 
+
+Different power states. Careful about how we switch it off.  Can’t affect reliability.  Sleep states is probably the best direction.  Response time is much better.
+
+Energy-aware scheduling: Develop mechanism to automatically select processor frequency for which energy to solution is minimized for a specific application.
+
+Demand response – as in the ability to react to electrical grid based incentives – requires enhanced scheduling tools. 
+
+Evolving hardware features will likely require enhanced system software and scheduling tools with control at all levels of the hierarchy; from the system down to the components.  An example might be a scenario where you have a high priority job, there are available nodes to run the job, but if run at the desired P-state, the system would exceed some notion of a power cap.  In this situation, can one dynamically alter the p-state of lower priority jobs to allow them to continue, perhaps at a slower rate, while also accommodating the new, high priority job.
+\end{itemize}
+
