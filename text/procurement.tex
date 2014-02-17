@@ -1,0 +1,68 @@
+\documentclass[runningheads,parskip=full]{scrreprt}
+%
+\usepackage{makeidx}  % allows for indexgeneration
+\usepackage[pdftex]{hyperref}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{amsmath}
+\usepackage{gensymb}
+
+%
+
+\newenvironment{packed_enum}{
+\begin{enumerate}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}{\end{enumerate}}
+
+\newenvironment{packed_item}{
+\begin{itemize}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}{\end{itemize}}
+
+
+\def\wl{\par \vspace{\baselineskip}}
+
+\begin{document}
+
+\pagestyle{headings}  % switches on printing of running  heads
+
+\title{
+Energy Efficient Considerations for HPC Procurement Documents \\
+\bigskip
+\normalsize{(version 0.4)}
+}
+
+
+\date{ }
+\maketitle              % typeset the title of the contribution
+
+\tableofcontents
+\listoftables
+\listoffigures
+
+%
+\chapter{Introduction}
+\input{intro}
+\label{sec:intro}
+
+\chapter{Measurements}
+\input{measurements}
+\label{sec:measurements}
+
+\chapter{Benchmarks}
+\input{benchmarks}
+\label{sec:benchmarks}
+
+\chapter{General Objectives}
+\input{genobjectives}
+\label{sec:genobjectives}
+
+\chapter{Cooling}
+\input{cooling}
+\label{sec:cooling}
+
+\end{document}

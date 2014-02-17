@@ -1,0 +1,19 @@
+\contentsline {chapter}{\numberline {1}Introduction}{5}{chapter.1}
+\contentsline {chapter}{\numberline {2}Measurements}{7}{chapter.2}
+\contentsline {section}{\numberline {2.1}System, Platform, and Cabinet Level Measurements}{9}{section.2.1}
+\contentsline {section}{\numberline {2.2}Node Level Measurements}{10}{section.2.2}
+\contentsline {section}{\numberline {2.3}Component Level Measurement}{12}{section.2.3}
+\contentsline {section}{\numberline {2.4}Management and Control}{13}{section.2.4}
+\contentsline {section}{\numberline {2.5}System Hardware and Software}{14}{section.2.5}
+\contentsline {section}{\numberline {2.6}Applications, Algorithms, Libraries}{14}{section.2.6}
+\contentsline {section}{\numberline {2.7}Schedulers, Middleware, Management}{15}{section.2.7}
+\contentsline {chapter}{\numberline {3}Benchmarks}{17}{chapter.3}
+\contentsline {chapter}{\numberline {4}General Objectives}{18}{chapter.4}
+\contentsline {section}{\numberline {4.1}Energy-related Total Cost of Ownership (TCO)}{18}{section.4.1}
+\contentsline {section}{\numberline {4.2}Power Usage Effectiveness (PUE)}{18}{section.4.2}
+\contentsline {section}{\numberline {4.3}Total Usage Effectiveness (TUE)}{19}{section.4.3}
+\contentsline {section}{\numberline {4.4}Energy Re-Use Effectiveness (ERE)}{19}{section.4.4}
+\contentsline {section}{\numberline {4.5}Power Distribution}{19}{section.4.5}
+\contentsline {chapter}{\numberline {5}Cooling}{20}{chapter.5}
+\contentsline {section}{\numberline {5.1}Liquid Cooling}{20}{section.5.1}
+\contentsline {section}{\numberline {5.2}Air Cooling}{21}{section.5.2}
