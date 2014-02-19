@@ -6,7 +6,7 @@
 \contentsline {chapter}{\numberline {3}Management and Control}{14}{chapter.3}
 \contentsline {section}{\numberline {3.1}Datacenter/Infrastructure}{14}{section.3.1}
 \contentsline {section}{\numberline {3.2}System Hardware and Software}{15}{section.3.2}
-\contentsline {section}{\numberline {3.3}Applications, Algorithms, Libraries}{15}{section.3.3}
+\contentsline {section}{\numberline {3.3}Applications, Algorithms, Libraries}{16}{section.3.3}
 \contentsline {section}{\numberline {3.4}Schedulers, Middleware, Management}{17}{section.3.4}
 \contentsline {chapter}{\numberline {4}Benchmarks}{18}{chapter.4}
 \contentsline {chapter}{\numberline {5}General Objectives}{19}{chapter.5}
