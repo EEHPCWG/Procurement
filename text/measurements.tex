@@ -32,10 +32,7 @@ For power, energy (and discrete current and voltage measurements if available) a
 detailed description of the measurement capabilities must be provided, 
 including a specified value for measurement precision, accuracy, and how data 
 samples are time-stamped. 
-WE HAD A LOT OF DISCUSSION ABOUT PRECISION and ACCURACY, 
-SHOULD WE EXPAND ON WHAT WE WANT HERE FOR THE ENTIRE DOCUMENT? 
-CAN WE PROVIDE A SPECIFIC REQUIREMENT OR BE MORE DESCRIPTIVE ABOUT 
-WHAT WE WANT HERE – JHL? Reference ANSI C12.1
+Reference ANSI C12.1
 
 \item[{\textbf{(info)}}]
 Why hierarchy?
@@ -145,7 +142,17 @@ Discrete Power (W) & \mbox{$ \ge $}100 per second \\
 \end{tabular}
 \end{table}
 
+Table~\ref{tab:spclevel} lists the mandatory, important and enhancing requirements for the internal 
+device sampling frequency. The internal samples may be individual current and voltage 
+samples or combined into a discrete power sample (see Figure~\ref{fig:powprof}). 
 
+Table~\ref{tab:spclevel} lists the mandatory, important and enhancing requirements for the external 
+reported value frequency. These are the data that are exposed externally for consumption (or 
+readout, see Figure~\ref{fig:powprof}). The external reported values can represent a discrete 
+or average power value, or an energy value. The details of the time period represented by 
+the average power and energy values and how power and energy are calculated and timestamped \textbf{must}
+be specified. Note that reported rate might differ from readout rate. Readout is when a user 
+chooses to consume the reported value and is limited by the reported rate.
 
 \begin{itemize}
 \item[\textbf{(info)}]
@@ -167,21 +174,9 @@ level measurement. The cabinet may be part of the compute, storage or networking
 \item[\textbf{(mandatory)}]
 Must be able to measure system, platform, and cabinet power and energy.
 
-Table~\ref{tab:spclevel} lists the mandatory, important and enhancing requirements for 
-the internal sampling frequency (internal device capability) and the external reported 
-value frequency (data available to the consumer) at the system, platform and cabinet level. 
-Figure~\ref{fig:powprof} should be referenced in conjunction with Table~\ref{tab:spclevel} to 
-help clarify these requirements. Note that Figure~\ref{fig:powprof} also depicts readout, 
-i.e. when the consumer chooses to read the data. Readout rate will not be addressed in 
-the requirements since readout rate is driven by the computer and limited by the reported 
-value frequency. The details describing the internal sampling frequency (voltage and 
-current or power) and how the average power and/or energy value is calculated \textbf{must} be provided.
-
 \item[\textbf{(mandatory)}]
-The power and energy values must be based on electrical measurements 
-(e.g., based on shunts or Hall effect sensors). Values that are derived from 
-heuristic models based on architectural events or system state (e.g., RAPL) can 
-complement but not replace them.
+The power and energy data must be real electrical measurements. In addition, measurements 
+based on heuristic models is desirable.
 
 \item[\textbf{(important)}]
 The vendor shall assist in the effort to collect these data in whatever other 
@@ -225,6 +220,18 @@ Discrete Power (W) & \mbox{$ \ge $}1000 per second \\
 \end{tabular}
 \end{table}
 
+Table~\ref{tab:nodelevel} lists the mandatory, important and enhancing requirements for the 
+internal device sampling frequency. The internal samples may be individual current and 
+voltage samples or combined into a discrete power sample (see Figure~\ref{fig:powprof}).
+
+Table~\ref{tab:nodelevel} lists the mandatory, important and enhancing requirements for the 
+external reported value frequency. These are the data that are exposed externally for 
+consumption (or readout, see Figure~\ref{fig:powprof}). The external reported values can represent a 
+discrete or average power value, or an energy value. The details of the time period represented 
+by the average power and energy values and how power and energy are calculated and timestamped \textbf{must}
+be specified. Note that reported rate might differ from readout rate. Readout is when a user 
+chooses to consume the reported value and is limited by the reported rate.
+
 \begin{itemize}
 
 \item[\textbf{(info)}]
@@ -240,20 +247,9 @@ as network switches, disk shelves, and disk controllers.
 The ability to measure the power and energy of any and all nodes must/should 
 be provided.  NOTE: Should this be mandatory? Change must/should appropriately.
 
-Table~\ref{tab:nodelevel} lists the mandatory, important, and enhancing requirements 
-for the internal sampling frequency (internal device capability) and the external 
-reported value frequency (data available to the consumer) at the node level. Figure~\ref{fig:powprof}
-should be referenced in conjunction with Table~\ref{tab:nodelevel} to help clarify 
-these requirements. Note that Figure~\ref{fig:powprof} also depicts readout, i.e., when 
-the consumer chooses to read the data. Readout rate will not be addressed in the 
-requirements since readout rate is driven by the computer and limited by the reported 
-value frequency. The details describing the internal sampling frequency (voltage and 
-current or power)and how the average power and/or energy value is calculated \textbf{must} be provided.
-
 \item[\textbf{(mandatory)}]
-The power and energy values must be based on electrical measurements (e.g., based on shunts 
-or Hall effect sensors). Values that are derived from heuristic models based on 
-architectural events or system state (e.g., RAPL) can complement but not replace them.
+The power and energy data must be real electrical measurements. In addition, 
+measurements based on heuristic models is desirable. 
 \end{itemize}
 
 
@@ -288,6 +284,17 @@ Discrete Power (W) & \mbox{$ \ge $}10000 per second \\
 \end{tabular}
 \end{table}
 
+Table~\ref{tab:comlevel} lists the mandatory, important and enhancing requirements for 
+the internal device sampling frequency. The internal samples may be individual current 
+and voltage samples or combined into a discrete power sample (see Figure~\ref{fig:powprof}).
+
+Table~\ref{tab:comlevel} lists the mandatory, important and enhancing requirements for the external 
+reported value frequency. These are the data that are exposed externally for consumption 
+(or readout, see Figure~\ref{fig:powprof}). The external reported values can represent a discrete or 
+average power value, or an energy value. The details of the time period represented by the 
+average power and energy values and how power and energy are calculated and timestamped \textbf{must} 
+be specified. Note that reported rate might differ from readout rate. Readout is when a 
+user chooses to consume the reported value and is limited by the reported rate.
 
 \begin{itemize}
 
@@ -304,20 +311,9 @@ much energy is being used by the CDU for motors, fans.
 The ability to measure the power and energy of each individual component must 
 (or should if this is enhancing?) be provided.
 	
-Table~\ref{tab:comlevel} lists the mandatory, important, and enhancing requirements for 
-the internal sampling frequency (internal device capability) and the external reported value 
-frequency (data available to the consumer) at the node level. Figure~\ref{fig:powprof} should 
-be referenced in conjunction with Table~\ref{tab:comlevel} to help clarify these requirements. 
-Note that Figure~\ref{fig:powprof} also depicts readout, i.e., when the consumer chooses to 
-read the data. Readout rate will not be addressed in the requirements since readout rate 
-is driven by the computer and limited by the reported value frequency. The details describing 
-the internal sampling frequency (voltage and current or power) and how the average 
-power and/or energy value is calculated \textbf{must} be provided.
-
 \item[\textbf{(mandatory)}]
-The power and energy values must be based on electrical measurements (e.g., based on 
-shunts or Hall effect sensors). Values that are derived from heuristic models based 
-on architectural events or system state (e.g., RAPL) can complement but not replace them.
+The power and energy data must be real electrical measurements. In addition, 
+measurements based on heuristic models is desirable. 
 \end{itemize}
 
 
