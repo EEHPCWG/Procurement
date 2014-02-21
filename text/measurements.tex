@@ -120,58 +120,33 @@ average power or energy value.
 \begin{table}[htbp]
 \caption{System, platform, and cabinet requirements for internal and reported frequency}
 \label{tab:spclevel}
-\begin{tabular}{|p{3.0cm}|p{3.5cm}|p{3.5cm}|p{3.5cm}|} \hline
-& & \textbf{Internal Sample}&\textbf{External}\\ 
-& & \textbf{Frequency}&\textbf{Reported Value}\\ 
-& & & \textbf{Frequency}\\ \hline
+\centering
+\begin{tabular}{ |l|l|l|l| }
+\hline
+Requirements & Internal Sample & Measured Value & External Reported \\
+ & Frequency & & Value Frequency \\
+\hline
 
-\textbf{Mandatory} &
-Discrete power (W)&
-\mbox{$ \ge $} 1 per second &
-\mbox{$ \ge $} 1 per second \\
+\multirow{3}{*}{Mandatory} & \multirow{3}{*}{\mbox{$ \ge $}10 per second} &
+Discrete Power (W) & \mbox{$ \ge $}1  per second \\ 
+ & & Average Power(W) & \mbox{$ \ge $}1 per second \\ 
+ & & Energy(J) & \mbox{$ \ge $}1 per second \\  \hline
 
-& 
-Average Power (W) &
-\mbox{$ \ge $} 10 per second &
-\mbox{$ \ge $} 1 per second \\
+\multirow{3}{*}{Important} & \multirow{3}{*}{\mbox{$ \ge $}100 per second} &   
+Discrete Power (W) & \mbox{$ \ge $}10 per second \\ 
+ & & Average Power(W) & \mbox{$ \ge $}1 per second \\ 
+ & & Energy(J) & \mbox{$ \ge $}1 per second \\  \hline
 
-& 
-Energy (J) &
-\mbox{$ \ge $} 10 per second &
-\mbox{$ \ge $} 1 per second \\ \hline
-
-\textbf{Important} & 
-Discrete power (W)&
-\mbox{$ \ge $} 10 per second &
-\mbox{$ \ge $} 10 per second \\
-
-& 
-Average Power (W) &
-\mbox{$ \ge $} 100 per second &
-\mbox{$ \ge $} 1 per second \\
-
-& 
-Energy (J) &
-\mbox{$ \ge $} 100 per second &
-\mbox{$ \ge $} 1 per second \\ \hline 
-
-\textbf{Enhancing} & 
-Discrete power (W)&
-\mbox{$ \ge $} 100 per second &
-\mbox{$ \ge $} 1000 per second \\
-
-& 
-Average Power (W) &
-\mbox{$ \ge $} 1000 per second &
-\mbox{$ \ge $} 1 per second \\
-
-& 
-Energy (J) &
-\mbox{$ \ge $} 1000 per second &
-\mbox{$ \ge $} 10 per second \\ \hline
+\multirow{3}{*}{Enhancing} & \multirow{3}{*}{\mbox{$ \ge $}1000 per second} & 
+Discrete Power (W) & \mbox{$ \ge $}100 per second \\ 
+ & & Average Power(W) & \mbox{$ \ge $}1 per second \\ 
+ & & Energy(J) & \mbox{$ \ge $}10 per second \\  \hline
 
 \end{tabular}
 \end{table}
+
+
+
 \begin{itemize}
 \item[\textbf{(info)}]
 The system level may vary by site and architecture, but could be so broad as to 
@@ -225,55 +200,27 @@ ability to isolate their contribution to the power and energy measurements.
 \begin{table}[htbp]
 \caption{Node Level Requirements for internal and reported frequency}
 \label{tab:nodelevel}
-\begin{tabular}{|p{3.0cm}|p{3.5cm}|p{3.5cm}|p{3.5cm}|} \hline
-& & \textbf{Internal Sample}&\textbf{External}\\ 
-& & \textbf{Frequency}&\textbf{Reported Value}\\ 
-& & & \textbf{Frequency}\\ \hline
+\centering
+\begin{tabular}{ |l|l|l|l| }
+\hline
+Requirements & Internal Sample & Measured Value & External Reported \\
+ & Frequency & & Value Frequency \\
+\hline
 
-\textbf{Mandatory} &
-Discrete power (W)&
-\mbox{$ \ge $} 1 per second &
-\mbox{$ \ge $} 1 per second \\
+\multirow{3}{*}{Mandatory} & \multirow{3}{*}{\mbox{$ \ge $}100 per second} &
+Discrete Power (W) & \mbox{$ \ge $}10 per second \\  
+ & & Average Power(W) & \mbox{$ \ge $}10 per second \\  
+ & & Energy(J) & \mbox{$ \ge $}1 per second \\  \hline
 
-& 
-Average Power (W) &
-\mbox{$ \ge $} 10 per second &
-\mbox{$ \ge $} 1 per second \\
+\multirow{3}{*}{Important} & \multirow{3}{*}{\mbox{$ \ge $}1000 per second} &   
+Discrete Power (W) & \mbox{$ \ge $}100 per second \\  
+ & & Average Power(W) & \mbox{$ \ge $}100 per second \\  
+ & & Energy(J) & \mbox{$ \ge $}10 per second \\  \hline
 
-& 
-Energy (J) &
-\mbox{$ \ge $} 10 per second &
-\mbox{$ \ge $} 1 per second \\ \hline
-
-\textbf{Important} & 
-Discrete power (W)&
-\mbox{$ \ge $} 10 per second &
-\mbox{$ \ge $} 10 per second \\
-
-& 
-Average Power (W) &
-\mbox{$ \ge $} 100 per second &
-\mbox{$ \ge $} 1 per second \\
-
-& 
-Energy (J) &
-\mbox{$ \ge $} 100 per second &
-\mbox{$ \ge $} 1 per second \\ \hline 
-
-\textbf{Enhancing} & 
-Discrete power (W)&
-\mbox{$ \ge $} 100 per second &
-\mbox{$ \ge $} 1000 per second \\
-
-& 
-Average Power (W) &
-\mbox{$ \ge $} 1000 per second &
-\mbox{$ \ge $} 1 per second \\
-
-& 
-Energy (J) &
-\mbox{$ \le $} 1000 per second &
-\mbox{$ \le $} 10 per second \\ \hline
+\multirow{3}{*}{Enhancing} & \multirow{3}{*}{\mbox{$ \ge $}10000 per second} & 
+Discrete Power (W) & \mbox{$ \ge $}1000 per second \\  
+ & & Average Power(W) & \mbox{$ \ge $}1000 per second \\  
+ & & Energy(J) & \mbox{$ \ge $}10 per second \\  \hline
 
 \end{tabular}
 \end{table}
@@ -316,58 +263,32 @@ architectural events or system state (e.g., RAPL) can complement but not replace
 \begin{table}[htbp]
 \caption{Component Level Requirements for internal and reported frequency}
 \label{tab:comlevel}
-\begin{tabular}{|p{3.0cm}|p{3.5cm}|p{3.5cm}|p{3.5cm}|} \hline
-& & \textbf{Internal Sample}&\textbf{External}\\ 
-& & \textbf{Frequency}&\textbf{Reported Value}\\ 
-& & & \textbf{Frequency}\\ \hline
+\centering
+\begin{tabular}{ |l|l|l|l| }
+\hline
+Requirements & Internal Sample & Measured Value & External Reported \\
+ & Frequency & & Value Frequency \\
+\hline
 
-\textbf{Mandatory} &
-Discrete power (W)&
-\mbox{$ \ge $} 1 per second &
-\mbox{$ \ge $} 1 per second \\
+\multirow{3}{*}{Mandatory} & \multirow{3}{*}{\mbox{$ \ge $}1000 per second} &
+Discrete Power (W) & \mbox{$ \ge $}100 per second \\  
+ & & Average Power(W) & \mbox{$ \ge $}10 per second \\  
+ & & Energy(J) & \mbox{$ \ge $}1 per second \\  \hline
 
-& 
-Average Power (W) &
-\mbox{$ \ge $} 10 per second &
-\mbox{$ \ge $} 1 per second \\
+\multirow{3}{*}{Important} & \multirow{3}{*}{\mbox{$ \ge $}10000 per second} &   
+Discrete Power (W) & \mbox{$ \ge $}1000 per second \\  
+ & & Average Power(W) & \mbox{$ \ge $}100 per second \\  
+ & & Energy(J) & \mbox{$ \ge $}10 per second \\  \hline
 
-& 
-Energy (J) &
-\mbox{$ \ge $} 10 per second &
-\mbox{$ \ge $} 1 per second \\ \hline
-
-\textbf{Important} & 
-Discrete power (W)&
-\mbox{$ \ge $} 10 per second &
-\mbox{$ \ge $} 10 per second \\
-
-& 
-Average Power (W) &
-\mbox{$ \ge $} 100 per second &
-\mbox{$ \ge $} 1 per second \\
-
-& 
-Energy (J) &
-\mbox{$ \ge $} 100 per second &
-\mbox{$ \ge $} 1 per second \\ \hline 
-
-\textbf{Enhancing} & 
-Discrete power (W)&
-\mbox{$ \ge $} 100 per second &
-\mbox{$ \ge $} 1000 per second \\
-
-& 
-Average Power (W) &
-\mbox{$ \ge $} 1000 per second &
-\mbox{$ \ge $} 1 per second \\
-
-& 
-Energy (J) &
-\mbox{$ \le $} 1000 per second &
-\mbox{$ \le $} 10 per second \\ \hline
+\multirow{3}{*}{Enhancing} & \multirow{3}{*}{\mbox{$ \ge $}100000 per second} & 
+Discrete Power (W) & \mbox{$ \ge $}10000 per second \\  
+ & & Average Power(W) & \mbox{$ \ge $}1000 per second \\  
+ & & Energy(J) & \mbox{$ \ge $}10 per second \\  \hline
 
 \end{tabular}
 \end{table}
+
+
 \begin{itemize}
 
 \item[\textbf{(info)}]
